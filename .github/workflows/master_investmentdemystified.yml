@@ -47,7 +47,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     environment:
-      name: 'production'
+      name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
     
     steps:
@@ -65,5 +65,5 @@ jobs:
         id: deploy-to-webapp
         with:
           app-name: 'investmentdemystified'
-          slot-name: 'production'
-          publish-profile: ${{ secrets.AzureAppService_PublishProfile_dfb597f693134c229425747cee0c2989 }}
+          slot-name: 'Production'
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_8C47E62F2497481086AC633AC067E4E1 }}
